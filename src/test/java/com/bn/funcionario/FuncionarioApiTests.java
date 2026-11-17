@@ -18,7 +18,7 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
-    properties = {"API_USER=aluno", "API_PASSWORD=teste123"})
+    properties = {"spring.security.user.name=aluno", "spring.security.user.password=teste123"})
 class FuncionarioApiTests {
     @LocalServerPort int port;
     @Autowired FuncionarioRepository repository;
